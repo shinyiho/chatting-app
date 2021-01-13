@@ -2,9 +2,10 @@ const express = require("express");
 const socketio = require("socket.io");
 const http = require("http");
 const PORT = process.env.PORT || 5000;
-const router = require("./router");
 const cors = require("cors");
 const { addUser, removeUser, getUser, getUserRoom } = require("./users");
+
+const client_folder = "./client/build";
 
 const app = express();
 const server = http.createServer(app);
@@ -14,7 +15,8 @@ const io = socketio(server, {
   },
 });
 app.use(cors());
-app.use(router);
+app.use("/", express.static(client_folder));
+
 // io.on("redirect", function (destination) {
 //   window.location.href = destination;
 // });
