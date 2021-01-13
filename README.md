@@ -1,4 +1,4 @@
-# [Chatting App Demo](https://shinyiho.github.io/chatting-app/)
+# [Chatting App Demo](https://reat-chatting-app.herokuapp.com/)
 
 ![](./user1.png)
 ![](./user2.png)
